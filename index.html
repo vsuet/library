@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bank Account</title>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="user-header">
+                <img src="img/user.jpg" alt="">
+                <div id="user-name" class="user-name">Пользователь</div>
+                <div class="click-user" onclick="clickOpen();"><i class="gg-pen"></i></div>
+            </div>
+            <div class="h1"><h1>Банковский счет</h1></div>
+        </section>
+    </header>
+    <main class="data-input">
+        <section class="block-user hidden" id="block-user">
+            <div class="close" onclick="clickClose()">
+                <img src="img/close.png" alt="">
+            </div>
+            <form id="user-form" class="user-form">
+                <h2 class="lead-in">Введите данные</h2>
+                <div>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" class="form-user-input" name="name" placeholder="Введите имя" required>
+                </div>
+                <div>
+                    <label for="first-name">Фамилия:</label>
+                    <input type="text" id="first-name" class="form-user-input" name="first-name" placeholder="Введите Фамилию" required>
+                </div>
+                <div>
+                    <label for="three-name">Отчество:</label>
+                    <input type="text" id="three-name" class="form-user-input" name="three-name" placeholder="Введите Отчество" required>
+                </div>
+                <div>
+                    <label for="date">Дата рождения:</label>
+                    <input type="text" id="date" class="form-user-input" name="date" placeholder="Введите дату рождения"  required>
+                </div>
+            </form>
+            <button class="btn-entrance" onclick="clickSave();">Сохранить</button>
+        </section>
+        <section class="data">
+            <h2>Открытие вклада</h2>
+            <select name="day" class="day">
+                <option value="">Срок вклада, дней / процентная ставка</option>
+                <option value="">91дн./2%</option>
+                <option value="">181дн./2,3%</option>
+                <option value="">275дн./2,4%</option>
+                <option value="">367дн./2,5%</option>
+                <option value="">546дн./3%</option>
+            </select>
+            <input type="text" class="cash" placeholder="Сумма вклада" required>
+            <select name="" class="type">
+                <option value="">Тип вклада</option>
+                <option value="">непополняемый</option>
+                <option value="">пополняемый</option>
+            </select>
+            <button class="btn-open">Открыть</button>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
