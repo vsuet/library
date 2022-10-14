@@ -1,0 +1,39 @@
+body{
+font-size:20px;
+line-height: 30px ;
+}
+#box { font-size: 2em; }
+.field {clear:both; text-align:right; line-height:25px;}
+label {float:left; padding-right:10px;}
+.main {float:left}
+body { 
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "nav article ads"
+      "footer footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    }
+  header, footer, article, nav, div {
+    padding: 20px;
+    background: aqua;
+  }
+  #pageHeader {
+    grid-area: header;
+  }
+  #pageFooter {
+    grid-area: footer;
+  }
+  #mainArticle { 
+    grid-area: article;      
+    }
+  #mainNav { 
+    grid-area: nav; 
+    }
+  #siteAds { 
+    grid-area: ads; 
+    }
