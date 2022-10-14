@@ -1,0 +1,11 @@
+.container .user_form {
+    margin-bottom: 10%;
+}
+
+#made_credit_id {
+    display: none;
+}
+
+.navbar {
+    min-width: 100%;
+}
