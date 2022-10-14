@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+
+    <!-- Подключаем бутстрап css -->
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.css">
+
+    <!-- Подключаем бпользовательские стили -->
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Главная</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="">Заявки на кредит</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Закрыть депозит</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Мой аккаунт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Информация о нас</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="title">
+        <h1>Заявки на кредит</h1>
+    </div>
+    <form class="user_form" name="form_create_credit">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">Отправим вам все документы письмом!</div>
+        </div>
+        <div class="mb-3">
+            <label for="passport" class="form-label">Серия и номер паспорта</label>
+            <input class="form-control" id="passport" name="passport">
+        </div>
+        <div class="mb-3">
+            <label for="select" class="form-label">Пожалуйста, выберите, сколько лет вы хотите пустить коту под хвост</label>
+            <select id="select" class="form-select" name="type_credit">
+                <option>В рабство на 10 лет</option>
+                <option>В рабство на 20 лет</option>
+                <option>В рабство на 30 лет</option>
+            </select>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Несу полную ответственность за свои действия</label>
+        </div>
+        <button type="submit" id="create_credit" class="btn btn-primary">Положить конец нормальной жизни</button>
+    </form>
+
+    <div class="container-made_credit" id="made_credit_id">
+        <div class="title-made_credit">
+            <h2>Уже не увидят мир прежним</h2>
+        </div>
+
+        <div class="made_credit">
+            <table class="table" id="madeCreditTable">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Серия и номер паспорта</th>
+                    <th scope="col">На сколько лет в рабство</th>
+                </tr>
+                </thead>
+                <tbody id="made_credit_table_body_id">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Подключаем бутстрап js-->
+<script src="assets/js/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.esm.js"></script>
+
+<!-- Подключаем jquery -->
+<script src="assets/js/jquery.js"></script>
+
+<!-- Пользовательский js -->
+<script src="assets/js/index.js"></script>
+</body>
+</html>
