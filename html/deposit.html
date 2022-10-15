@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+    <title>Bank Account</title>
+</head>
+<body>
+    <header class="navbar-top">
+        <div class="user-name">
+            <img class="user-img" src="/img/user.png" alt="">
+            <div class="user-name-date">
+                <span href="#" id="user-name">User Name</span>
+                <span href="#" id="user-date"></span>
+            </div>
+        </div>
+        <div><h1>Банковский счет</h1></div>
+    </header>
+    <main>
+        <div class="navbar-left">
+            <div class="navbar-left-item"><span><i class="gg-pen"></i></span> <a href="/index.html"> Редактировать данные пользователя</a></div>
+            <div class="navbar-left-item"><span><i class="gg-pen"></i></span> <a href="/html/deposit.html"> Управление депозитами</a></div>
+            <div class="navbar-left-item"><span><i class="gg-pen"></i></span> <a class="" href="#">Выход</a></div>
+        </div>
+        <div class="content">
+            <h2>Управление депозитами</h3>
+            <div class="toolbar">
+                <button class="js-open-deposit btn-open-deposit">Открыть вклад</button>
+            </div>
+            <div class="data">
+                <table class="js-data-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Срок вклада, дней / процентная ставка</th>
+                        <th scope="col">Сумма</th>
+                        <th scope="col">Тип вклада</th>
+                        <th>Действие</th>
+                      </tr>
+                    </thead>
+                    <tbody class="js-add-vclad">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="window js-top-upp">
+            <div class="window-content">
+                <h2>Пополнение счета</h2>
+                <form action="/user_save.php" class="form" method="get">
+                    <div class="form-row">
+                        <div>
+                            <label for="">Данные пользователя</label>
+                            <input name="" type="text" class="cash" placeholder="Введите данные пользователя" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="">Номер карты</label>
+                            <input name="" type="text" class="cash" placeholder="Введите номер карты" required>
+                        </div>
+                        <div>
+                            <label for="">Номер карты</label>
+                            <input name="" type="text" class="cash" placeholder="Введите срок действие карты" required>
+                        </div>
+                        <div>
+                            <label for="">Код(с оборота карты)</label>
+                            <input name="" type="text" class="cash" placeholder="Введите код" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="">Сумма пополнения</label>
+                            <input name="" type="text" class="cash" placeholder="Введите сумму пополнения" required>
+                        </div>
+                    </div>
+                    <div class="form-row ">
+                        <button class="js-btn-open-vclad btn-open">Пополнить вклад</button>
+                        <button type="button" class="js-window-close-2 btn-window-close">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="window js-write-off">
+            <div class="window-content">
+                <h2>Списание с счета</h2>
+                <form action="/user_save.php" class="form" method="get">
+                    <div class="form-row">
+                        <div>
+                            <label for="">Сумма списания</label>
+                            <input name="cash" type="text" class="cash" placeholder="Введите сумму списания" required>
+                        </div>
+                    </div>
+                    <div class="form-row ">
+                        <button class="js-btn-open-vclad btn-open js-write-off-vclad">Списать с вклад</button>
+                        <div class="js-write-off-close btn-window-close">Отмена</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="window js-window" id="js-window">
+            <div class="window-content">
+                <h2>Открытие вклада</h2>
+                <form action="#" class="form" method="get">
+                    <div class="form-row">
+                        <div>
+                            <label for="vclad">Срок вклада, дней / процентная ставка</label>
+                            <select name="vclad" class="data-vclad js-data-vclad" id="vclad">
+                                <option disabled selected>Срок / ставка</option>
+                                <option value="91дн./2%">91дн./2%</option>
+                                <option value="181дн./2,3%">181дн./2,3%</option>
+                                <option value="275дн./2,4%">275дн./2,4%</option>
+                                <option value="367дн./2,5%">367дн./2,5%</option>
+                                <option value="546дн./3%">546дн./3%</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="cash">Сумма вклада</label>
+                            <input id="cash" name="cash" type="text" class="cash js-cash-vclad" placeholder="Сумма вклада" required>
+                        </div>
+                        <div>
+                            <label for="type">Тип вклада</label>
+                            <select id="type" name="type" class="type js-type">
+                                <option disabled selected >Тип вклада</option>
+                                <option value="непополняемый">непополняемый</option>
+                                <option value="пополняемый">пополняемый</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row ">
+                        <button class="js-btn-open-vclad btn-open js-btn-open-openvclad">Открыть вклад</button>
+                        <div class="js-window-close btn-window-close">Отмена</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/js/deposit.js"></script>
+</body>
+</html>

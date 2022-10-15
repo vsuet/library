@@ -1,90 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Bank Account</title>
-    </head>
-    <body>
-        <header>
-            <section class="header">
-                <div class="user-header">
-                    <img src="img/user.jpg" alt="">
-                    <div id="user-name" class="user-name">Пользователь</div>
-                    <div class="click-user js-open-left"><i class="gg-pen"></i></div>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+    <title>Bank Account</title>
+</head>
+<body>
+    <header class="navbar-top">
+        <div class="user-name">
+            <img class="user-img" src="/img/user.png" alt="">
+            <div class="user-name-date">
+                <span href="#" id="user-name">User Name</span>
+                <span href="#" id="user-date"></span>
+            </div>
+        </div>
+        <div><h1>Банковский счет</h1></div>
+    </header>
+    <main>
+        <div class="navbar-left">
+            <div class="navbar-left-item"><span><i class="gg-pen"></i></span> <a href="/index.html"> Редактировать данные пользователя</a></div>
+            <div class="navbar-left-item"><span><i class="gg-pen"></i></span> <a href="/html/deposit.html"> Управление депозитами</a></div>
+            <div class="navbar-left-item"><span><i class="gg-pen"></i></span> <a class="" href="#">Выход</a></div>
+        </div>
+        <div class="content">
+            <h2>Редактировать данные пользователя</h2>
+            <form action="#" class="form" method="get">
+                <div id="user-form" class="form-row ">
+                    <div>
+                        <label for="firstName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" name="first_name" id="firstName" placeholder="" value="" required="">
+                    </div>
+                    <div>
+                        <label for="lastName" class="form-label">Фамилия</label>
+                        <input type="text" class="form-control" name="second_name" id="lastName" placeholder="" value="" required="">
+                    </div>
+                    <div>
+                        <label for="thirdName" class="form-label">Отчество</label>
+                        <input type="text" class="form-control" name="third_name" id="thirdName" placeholder="" value="" required="">
+                    </div>
                 </div>
-                <div class="h1"><h1>Банковский счет</h1></div>
-            </section>
-        </header>
-        <main class="data-input">
-            <section class="block-user" id="block-user">
-                <div class="close js-close-left">
-                    <img src="img/close.png" alt="">
-                </div>
-                <form id="user-form" class="user-form">
-                    <h2>Введите данные</h2>
+                <div class="form-row">
                     <div>
-                        <label for="name">Имя:</label>
-                        <input type="text" id="name" class="form-user-input" name="name" placeholder="Введите имя" required>
-                    </div>
-                    <div>
-                        <label for="first-name">Фамилия:</label>
-                        <input type="text" id="first-name" class="form-user-input" name="first-name" placeholder="Введите Фамилию" required>
-                    </div>
-                    <div>
-                        <label for="three-name">Отчество:</label>
-                        <input type="text" id="three-name" class="form-user-input" name="three-name" placeholder="Введите Отчество" required>
-                    </div>
-                    <div>
-                        <label for="date">Дата рождения:</label>
-                        <input type="text" id="date" class="form-user-input" name="date" placeholder="Введите дату рождения"  required>
-                    </div>
-                </form>
-                <button class="btn-entrance js-save-user ">Сохранить</button>
-            </section>
-            <section class="data-section">
-                <div class="data">
-                    <h2>Открытие вклада</h2>
-                    <form class="js-data-vclad">
-                        <select name="vclad" class="data-vclad">
-                            <option value="">Срок вклада, дней / процентная ставка</option>
-                            <option value="91дн./2%">91дн./2%</option>
-                            <option value="181дн./2,3%">181дн./2,3%</option>
-                            <option value="275дн./2,4%">275дн./2,4%</option>
-                            <option value="367дн./2,5%">367дн./2,5%</option>
-                            <option value="546дн./3%">546дн./3%</option>
+                        <label for="dayDate" class="form-label">День рождения</label>
+                        <select id="dayDate" name="day_date" class="js-day-date">
+                            <option disabled selected >Выберите день</option>
                         </select>
-                        <input name="cash" type="text" class="cash" style="margin: 0 40px;" placeholder="Сумма вклада" required>
-                        <select name="type" class="type">
-                            <option value="" >Тип вклада</option>
-                            <option value="НЕПОПОЛНЯЕМЫЙ">непополняемый</option>
-                            <option value="ПОПОЛНЯЕМЫЙ">пополняемый</option>
+                    </div>
+                    <div>
+                        <label for="monthDate" class="form-label">Месяц рождения</label>
+                        <select id="monthDate" name="month_date" class="js-month-date">
+                            <option disabled selected >Выберите месяц</option>
+                            <option value="01">Январь</option>
+                            <option value="02">Февраль</option>
+                            <option value="03">Март</option>
+                            <option value="04">Апрель</option>
+                            <option value="05">Май</option>
+                            <option value="06">Июнь</option>
+                            <option value="07">Июль</option>
+                            <option value="08">Август</option>
+                            <option value="09">Сентябрь</option>
+                            <option value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option>
+                            <option value="12">Декабрь</option>
                         </select>
-                    </form>
-                    <button class="btn-open js-btn-open-vclad">Открыть</button>
+                    </div>
+                    <div>
+                        <label for="yearDate" class="form-label">Год рождения</label>
+                        <select id="yearDate" name="year_date" class="js-year-date">
+                            <option disabled selected >Выберите год</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="data">
-                    <h2>Открытые вклады</h2>
-                    <table class="js-data-table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Срок вклада, дней / процентная ставка</th>
-                            <th scope="col">Сумма</th>
-                            <th scope="col">Тип вклада</th>
-                            <th>Действие</th>
-                          </tr>
-                        </thead>
-                        <tbody class="js-add-vclad">
-                        </tbody>
-                      </table>
+                <div>
+                    <button type="button" class="submit js-submit">Сохранить</button>
                 </div>
-            </section>
-        </main>
-        <footer>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+            </form>
+        </div>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
 </html>

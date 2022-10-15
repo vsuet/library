@@ -1,41 +1,54 @@
-$( document ).ready(function() {
-    $('.js-close-left').on('click', function(){
-        $('#block-user').hide(500);
-    });
+const monthDate = document.querySelector('.js-month-date'); 
+const dayDate = document.querySelector('.js-day-date');
+const yearDate = document.querySelector('.js-year-date');
+const yearStart = 1950,
+yearEnd = 2020;
 
-    $('.js-open-left').on('click', function(){
-        $('#block-user').show(500);
-    });
+const userName = document.querySelector('#user-name');
+let saveButton = document.querySelector('.js-submit');
+let firstName = document.querySelector('[name="first_name"]');
+let secondName = document.querySelector('[name="second_name"]');
+let thirdName = document.querySelector('[name="third_name"]');
+let userDate = document.querySelector('#user-date');
 
-    $('.js-save-user').on('click', function(){
-        let form = $('#user-form').get(0);
-        var formData = new FormData(form);
-        let ifo = formData.get('name')+" " + formData.get('first-name')+" " + formData.get('three-name')+" " + formData.get('date')+" ";
-        $('#user-name').text(ifo)
-    });
 
-    $('.js-btn-open-vclad').on('click', function(){
-        let form = $('.js-data-vclad').get(0);
-        var formData = new FormData(form);
-        console.log(formData.get('vclad'));
-        let thNew = '<tr class = "js-row">'+
-            '<td>'+formData.get('vclad')+'</td>'+
-            '<td class = "js-cash">'+formData.get('cash')+'</td>'+
-            '<td>'+formData.get('type')+'</td>'+
-            '<td><button class="js-top-up action">Пополнить на 100р</button><button class = "js-remove-row action">Закрыть</button></td>'+
-            '</tr>';
 
-        $('.js-add-vclad').append(thNew);
-    });
+for (var i = 1; i <= 31; i=i+1) {
+    let option = document.createElement("option");
+    option.text = i;
+    option.value = i;
+    
+    dayDate.add(option);
+};
 
-    $('.js-data-table').on('click','.js-top-up', function(){
-        let cashRow = $(this).parents('.js-row').children('.js-cash');
-        cashRow.text(parseFloat(cashRow.text())+100);
-        console.log('dfghjk');
-    });
+for (let yearCurrent = yearStart; yearCurrent <= yearEnd;  yearCurrent = yearCurrent + 1) {
+    let option = document.createElement("option");
+    option.text = yearCurrent;
+    option.value = yearCurrent;
 
-    $('.js-data-table').on('click','.js-remove-row', function(){
-        let row = $(this).parents('.js-row');
-        row.remove();
-    });
+    yearDate.add(option);
+};
+
+saveButton.addEventListener('click', function(e){
+    localStorage.setItem('first_name', firstName.value);
+    userName.innerHTML = localStorage.getItem('first_name');
+    localStorage.setItem('second_name', secondName.value);
+    userName.innerHTML += ' ' + localStorage.getItem('second_name');
+    localStorage.setItem('third_name', thirdName.value);
+    userName.innerHTML += ' ' + localStorage.getItem('third_name');
+    localStorage.setItem('day_date', dayDate.value);
+    userDate.innerHTML = ' (' + localStorage.getItem('day_date');
+    localStorage.setItem('month_date', monthDate.value);
+    userDate.innerHTML += '.' + localStorage.getItem('month_date');
+    localStorage.setItem('year_date', yearDate .value);
+    userDate.innerHTML += '.' + localStorage.getItem('year_date') + ')';
 });
+
+userName.innerHTML = localStorage.getItem('first_name');
+userName.innerHTML += ' ' + localStorage.getItem('second_name');
+userName.innerHTML += ' ' + localStorage.getItem('third_name');
+
+userDate.innerHTML = ' (' + localStorage.getItem('day_date');
+userDate.innerHTML += '.' + localStorage.getItem('month_date');
+userDate.innerHTML += '.' + localStorage.getItem('year_date') + ')';
+
