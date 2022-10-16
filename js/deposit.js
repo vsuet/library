@@ -1,5 +1,4 @@
 const btnOpenDeposit = document.querySelector('.js-open-deposit'),
-
     btnOffVclad = document.querySelector('.js-write-off-vclad'),
     btnClose = document.querySelector('.js-window-close'),
     btnWriteOffClose = document.querySelector('.js-write-off-close');
