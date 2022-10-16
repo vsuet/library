@@ -27,9 +27,8 @@ openDeposit.addEventListener('click', function(event){
 
 let count = parseInt(localStorage.getItem('count')) || 0; 
 count++;
-    localStorage.setItem('count', count)
 
-console.log(localStorage.getItem('count'));
+    localStorage.setItem('count', count)
 
     let deposit = {
         'procent': document.querySelector('.js-data-vclad').value,
