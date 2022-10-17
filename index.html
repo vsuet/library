@@ -1,28 +1,32 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <title>Американский банк</title>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/default.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
 <header>
     <h1>Bank of America</h1>
     <div><a href="index.html">Главная</a></div>
 </header>
+
 <main class="main-grid">
+
     <section class="person">
-        <h3>Ваши персональные данные</h3>
+        <h4>Ваши персональные данные</h4>
         <div id="user-data">
 
         </div>
     </section>
+
     <section class="control">
         <div>
-            <h3>Управление личными счетами</h3>
+            <h4>Управление вашими картами</h4>
             <form id="form-new-wallet">
                 <p>Введите данные:</p>
                 <div>
@@ -30,29 +34,36 @@
                     <input type="text" id="name-wallet" minlength="3" maxlength="16" name="name-wallet" required>
                 </div>
                 <div>
+                    <label for="type-wallet">Тип карты:</label>
+                    <select id="type-wallet" required>
+                        <option value="deposit">Deposit Card</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="premium">Premium Card</option>
+                    </select>
+                </div>
+                <div>
                     <button type="submit">Открыть счет</button>
                     <button type="button" id="card-close">Закрыть счет</button>
                 </div>
             </form>
         </div>
-        <div>
-            <h3>Получение кредита</h3>
-            <p>Приносим свои извинения, но отталкиваясь от вашей кредитной истории, мы не можем в данный момент
-                предоставить вам кредит.</p>
-        </div>
     </section>
+
     <section class="notification">
         <h3>Уведомления</h3>
-        <div id="notification-list">
-
-        </div>
+        <button id="clear-notifications" type="button">Очистить</button>
+        <div id="notification-list"></div>
     </section>
+
     <section class="wallets">
         <hr>
         <h3>Ваши открытые счёты:</h3>
         <section id="wallets-list"></section>
     </section>
+
 </main>
+
 <script src="scripts/index.js"></script>
+
 </body>
 </html>
