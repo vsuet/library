@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Банковский аккаунт</title>
+</head>
+<body>
+<div class="container flex-row">
+    <nav>
+        <h1>PayBank <img src="img/bank_icon.png" width="20px" alt="Paybank icon"></h1>
+        <hr class="hr-nav">
+        <div class="nav-list flex_column">
+            <button><span><img src="img/home.png" width="10%" alt=""> Главная</span></button>
+            <a href="index.html">
+                <button><span><img src="img/pof.png" width="10%" alt=""> Профиль</span></button>
+            </a>
+            <button><span><img src="img/invest.png" width="10%" alt=""> Инвестиции</span></button>
+            <button><span><img src="img/garant.png" width="10%" alt=""> Гарантии</span></button>
+            <button><span><img src="img/settings.png" width="10%" alt=""> Панель управления</span></button>
+        </div>
+    </nav>
+    <main>
+        <div class="profile-curtain"> Профиль пользователя</div>
+        <div class="account flex_row">
+            <div class="profile-actions">
+                <div class="profile-description flex_column" id="profile">
+                    <img src="img/profile.png" alt="Profile icon">
+                    <form id="form_names" action="index.html">
+                        <p><input type="text" id="last-name" value="" placeholder="Фамилия"></p>
+                        <p><input type="text" id="first-name" value="" placeholder="Имя"></p>
+                        <p><input type="text" id="patronimyc" value="" placeholder="Отчество"></p>
+                        <p><input type="date" id="date-born" value="" placeholder="Дата рождения"></p>
+                        <p><input type="text" id="number" value="" placeholder="Номер телефона"></p>
+                        <div class="flex_column">
+                            <button type="submit" id="submit_bttn" class="change">Сохранить</button>
+                            <button type="reset" id="delete_btn" class="change">Удалить</button>
+                        </div>
+                    </form>
+
+                </div>
+                <br>
+                <div class="history flex_column">
+                    <h3>Последние операции</h3>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="img/tele2.jpg" alt="" width="40px">
+                            </td>
+                            <td>
+                                <p>Tele2</p>
+                                <p class="small">Оплата товаров и услуг</p>
+                            </td>
+                            <td>150₽</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/kfc.png" alt="" width="40px">
+                            </td>
+                            <td>
+                                <p>KFC</p>
+                                <p class="small">Оплата товаров и услуг</p>
+                            </td>
+                            <td>357₽</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/popopl.png" alt="" width="40px">
+                            </td>
+                            <td>
+                                <p>Артем Витальевич В.</p>
+                                <p class="small">Входящий перевод</p>
+                            </td>
+                            <td class="green">+1500₽</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/family.png" alt="" width="40px">
+                            </td>
+                            <td>
+                                <p>Семья</p>
+                                <p class="small">Оплата товаров и услуг</p>
+                            </td>
+                            <td>950₽</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/patyor.jpg" alt="" width="40px">
+                            </td>
+                            <td>
+                                <p>Пятёрочка</p>
+                                <p class="small">Оплата товаров и услуг</p>
+                            </td>
+                            <td>415₽</td>
+                        <tr>
+                            <td>
+                                <img src="img/kb.png" alt="" width="40px">
+                            </td>
+                            <td>
+                                <p>Красное и Белое</p>
+                                <p class="small">Оплата товаров и услуг</p>
+                            </td>
+                            <td>350₽</td>
+                        </tr>
+
+                    </table>
+                    <a href="history.html">
+                        <button> Еще</button>
+                    </a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="card-list">
+                    <p class="parcel-text">Кошелёк</p>
+                    <hr width="60%">
+                    <div class="card flex_row">
+                        <div><img src="img/card.png" alt=""></div>
+                        <div>
+                            <p class="parcel-text" id="money"></p>
+                            <p class="small">Mastercard Mass *7395</p>
+                        </div>
+                        <div class="left">
+                            <img src="img/mastercard.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="butt flex-row">
+                        <br>
+                        <button class="change" onclick="add()">Пополнить баланс</button>
+                        <button class="change" onclick="take()">Снять деньги</button>
+                        <button class="change" onclick="load()">Загрузить</button>
+                    </div>
+                </div>
+                <div id="deposits" class="deposits">
+                    <p class="parcel-text">Вклады и счета</p>
+                    <hr width="60%">
+                    <button id="plus" class="plus-btn"><img src="img/plus.png" height="30px" alt=""></button>
+                    <button id="del-div" class="plus-btn"><img src="img/delete.png" height="30px" alt=""
+                                                               onclick="remove()"></button>
+                    <div class="deposit-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="javascript.js"></script>
+    <script src="javascript2.js"></script>
+</div>
+</body>
+</html>
