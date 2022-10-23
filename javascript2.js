@@ -31,7 +31,7 @@ function remove() {
 
 function add() {
     let addmoney = prompt("Введите желаему сумму для пополнения");
-    money_summ = money_summ + Number(addmoney);
+    money_summ =Number (money_summ) + Number(addmoney);
     money.innerHTML = money_summ;
     localStorage.setItem('money_summ', money_summ);
 }
