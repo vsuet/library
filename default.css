@@ -1,0 +1,228 @@
+html {
+    font-size: 14pt;
+}
+html,
+body {
+	height: 100%;
+	background-color: #718F94;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+}
+a {
+	color: #794f45;
+}
+h1 {
+	font-size: 40px;
+	line-height: 1;
+	margin: 0px 0px 50px 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5pt;
+}
+
+p, label {
+    font-size: 0.9rem;
+}
+
+input {
+    display: block;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+    "control control person"
+    "wallets wallets notification";
+    
+}
+.control {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: control;
+    
+    
+    border-radius: 20px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    background: #90B494;
+    
+}
+
+.control>div, .person {
+    width: 100%;
+  
+    width: 300px;
+    height: 200px;
+ 
+}
+
+.person {
+    text-align: center;
+    height: 95%;
+    width: 90%;
+    grid-area: person;
+    border-radius: 20px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    background: #90B494;
+    
+}
+
+.notification-card {
+    border-style: solid;
+    border-width: 1pt;
+    border-radius: 20px;
+    padding: 5pt;
+    box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+    
+}
+
+header {
+    margin: 0px 0px 30px 0px;
+    height: 100px;
+    padding: 25px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    background: #545775;
+    border-radius: 20px;
+  
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+header>div {
+    flex-direction: row;
+    display: flex;
+}
+
+a {
+    color: white;
+}
+
+#wallets-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#user-data>img {
+    width: 200px;
+    height: 269px;
+    border-radius: 14px;
+}
+
+.card {
+    cursor: pointer;
+   
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 9px;
+    width: 100%;
+   
+    border-radius: 20px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    background: #90B494;
+}
+.card:hover{
+    filter: brightness(120%);
+}
+.card:active{
+filter: brightness(90%)
+}
+.card-header {
+    text-align: center;
+    color: darkblue;
+    
+}
+
+.card-text {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+
+.wallets {
+    grid-area: wallets;
+}
+
+.notification {
+    grid-area: notification;
+    background: #90B494;
+    border-radius: 20px;
+       box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+   
+}
+
+.card-footer {
+    text-align: right;
+    font-size: 0.6rem;
+    color: rgba(0, 0, 0, 0.5);
+    background: #a5d9e2;
+    border-radius: 20px;
+       box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+   
+}
+
+.transaction {
+    border-radius: 9px;
+    border: gray solid 1px;
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.premium-card-text {
+    color: darkmagenta;
+}
+
+.credit-card-text {
+    color: lightcoral;
+}
+
+.deposit-card-text {
+    color: skyblue;
+}
+#clear-notifications{
+  
+    width: 96%;
+    height: 10%;
+    background: #A5D9E2;
+ 
+    border-radius: 20px;
+       box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+}
+#clear-notifications:hover{
+    filter: brightness(120%);
+}
+#clear-notifications:active{
+    filter: brightness(90%);
+}
+
+.button1{
+  color: #545775;
+    width: 5%;
+    height: 30%;
+    background: #A5D9E2;
+ 
+    border-radius: 20px;
+       box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+}
+#button1:hover{
+    filter: brightness(120%);
+}
+#button1:active{
+    filter: brightness(90%);
+}
+
+

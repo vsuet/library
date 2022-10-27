@@ -1,0 +1,70 @@
+<html lang="ru">
+<head>
+    <title>Bank__Account</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="default.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <h1>Voronezh Bank</h1>
+    <div class="button1"><a href="index.html">Главная</a></div>
+    
+</header>
+
+<main class="main-grid">
+
+    <section class="person">
+        <h4>Your Personal information</h4>
+        <div id="user-data">
+
+        </div>
+    </section>
+
+    <section class="control">
+        <div>
+            <h4>Managing your cards</h4>
+            <form id="form-new-wallet"  >
+                <p>Enter data:</p>
+                <div>
+                    <label for="name-wallet">Account name:</label>
+                    <input type="text" id="name-wallet" minlength="3" maxlength="16" name="name-wallet" required >
+                </div>
+                <div>
+                    <label for="type-wallet">Card type:</label>
+                    <select id="type-wallet" required>
+                        <option value="deposit">Deposit Card</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="premium">Premium Card</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Open an account</button>
+                    <button type="button" id="card-close">close an account</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="notification">
+        <h3>Notifications</h3>
+        <button id="clear-notifications" type="button">Clear</button>
+        <div id="notification-list"></div>
+    </section>
+
+    <section class="wallets">
+        <hr>
+        <h3>Your open accounts:</h3>
+        <section id="wallets-list"></section>
+    </section>
+
+</main>
+
+<script src="index.js"></script>
+
+</body>
+</html>
