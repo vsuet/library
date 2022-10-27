@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #F9F5F6;
+}
+
+main {
+    margin: 2.5rem;
+}
+.icon-bank{
+   width: 8rem;
+    height: 8rem;
+}
+h1 {
+    margin-left: 8rem;
+    margin-top: -4rem;
+    color: #32393F;
+}
+h5 {
+    position: relative;
+    margin-left: 13rem;
+    font-style: italic;
+    color: #32393F
+}
+
+#form_names
+{
+    font-size: 1.2rem;
+    background-color: #EECC61;
+    max-width: 380px;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 7px 7px 2px #F3A845;
+}
+button {
+    font-size: 17px;
+}
+button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.icon {
+    margin-left: 6px;
+    margin-top: 6px;
+    width: 3.7rem;
+    height: 3.7rem;
+}
+#form_investment {
+    font-size: 1.1rem;
+    margin-top: 4rem;
+    background-color: #BEBEBE;
+    max-width: 410px;
+    line-height: 30px;
+    box-shadow: 7px 7px 2px #868686;
+}
+#form_investment h2 {
+    margin-left: 4.5rem;
+    margin-top: -3rem;
+}
+.row {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+#form_withdrawal {
+    font-size: 1.1rem;
+    margin-top: -13.3rem;
+    margin-left: 37rem;
+    background-color: #BEBEBE;
+    max-width: 410px;
+    line-height: 30px;
+    box-shadow: 7px 7px 2px #868686;
+}
+#form_withdrawal h2 {
+    margin-left: 4.5rem;
+    margin-top: -3rem;
+}
+.button-row {
+    margin-left: 5px;
+}
+#form_replenishment {
+    font-size: 1.1rem;
+    margin-top: -10rem;
+    margin-left: 75rem;
+    background-color: #BEBEBE;
+    max-width: 410px;
+    line-height: 30px;
+    box-shadow: 7px 7px 2px #868686;
+}
+#form_replenishment h2 {
+    margin-left: 4.5rem;
+    margin-top: -3rem;
+}
+
+#safety-rules {
+    margin-top: 3.25rem;
+    font-size: 20px;
+  }
+#p-one {
+    outline: 2px solid #666;
+   width: 300px;
+    height: 150px;
+    padding: 10px;
+    background: rgba(124, 131, 136, 0.71);
+}
+
+#p-two {
+    outline: 2px solid #666;
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    margin-left: 25rem;
+    margin-top: -9.5rem;
+    background: rgba(124, 131, 136, 0.71);
+}
+
+#p-three {
+    outline: 2px solid #666;
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    margin-left: 50rem;
+    margin-top: -9.5rem;
+    background: rgba(124, 131, 136, 0.71);
+}
+
+footer {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    font-size: 1.1rem;
+    font-style: italic;
+}
