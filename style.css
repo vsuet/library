@@ -371,3 +371,21 @@ input#first-name, input#last-name, input#patronimyc, input#date-born, input#numb
     background-color: rgb(44, 44, 122);
     margin-bottom: 1%;
 }
+#profile{
+    display: none;
+}
+#changeBtn{
+    height: 45px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    margin-bottom: 1%;
+    position: relative;
+    left: -5px;
+}
+#ready{
+    line-height: 10px;
+}

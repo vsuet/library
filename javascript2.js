@@ -14,14 +14,16 @@ button.addEventListener("click", function () {
         "    <div>\n" +
         "        <p> Вклад </p>" +
         "    </div>\n" +
-        "    <div class=\"deposit-money money1\"><input type=\"text\" name=\"\" placeholder=\"0\">₽</div>\n" +
+        "    <div class=\"deposit-money money1\"><input class=\"depositesMoney\" type=\"text\" name=\"\" placeholder=\"0\">₽</div>\n" +
+
         "</div>" +
         "<hr width='90%'>";
     list.appendChild(div);
     i++;
 })
 
-function remove() {
+
+function remove(event) {
     let list = document.querySelector('.deposit-list');
     let div = document.createElement('div');
     div.setAttribute('id', 'deposit_' + i);
@@ -46,8 +48,5 @@ function take() {
         localStorage.setItem('money_summ', money_summ);
     }
 }
-
-function load() {
-    money_summ = localStorage.getItem('money_summ');
-    money.innerHTML = money_summ;
-}
+money_summ = localStorage.getItem('money_summ');
+money.innerHTML = money_summ;

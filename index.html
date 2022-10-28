@@ -39,6 +39,19 @@
                             <button type="reset" id="delete_btn" class="change">Удалить</button>
                         </div>
                     </form>
+                        <div class="flex_column">
+                    </div>
+
+                </div>
+                <div id="ready" class="profile-description flex_column">
+                    <img src="img/profile.png" alt="Profile icon">
+                    <br>
+                    <p>Фамилия:<span id="last-name1"> </span></p>
+                    <p>Имя: <span id="first-name1" ></span></p>
+                    <p>Отчество: <span id="patronimyc1"> </span></p>
+                    <p>Дата рождения: <span id="date-born1"></span></p>
+                    <p>Номер телефона: <span id="number-1"></span></p><br>
+                    <button id="changeBtn" class="change">Изменить</button>
 
                 </div>
                 <br>
@@ -131,15 +144,13 @@
                         <br>
                         <button class="change" onclick="add()">Пополнить баланс</button>
                         <button class="change" onclick="take()">Снять деньги</button>
-                        <button class="change" onclick="load()">Загрузить</button>
                     </div>
                 </div>
                 <div id="deposits" class="deposits">
                     <p class="parcel-text">Вклады и счета</p>
                     <hr width="60%">
                     <button id="plus" class="plus-btn"><img src="img/plus.png" height="30px" alt=""></button>
-                    <button id="del-div" class="plus-btn"><img src="img/delete.png" height="30px" alt=""
-                                                               onclick="remove()"></button>
+                    <button id="del-div" class="plus-btn"><img src="img/delete.png" height="30px" alt="" onclick="remove()"></button>
                     <div class="deposit-list">
                     </div>
                 </div>
