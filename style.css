@@ -1,0 +1,391 @@
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #e0e2ea;
+    margin: 0;
+    font-family: Century Gothic, cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    background-color: rgb(44, 44, 122);
+    width: 14%;
+    padding-right: 2px;
+    word-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.hr-nav {
+    height: 0.01ch;
+    background-color: thistle;
+}
+
+.nav-list button {
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    color: white;
+}
+
+.nav-list button span {
+    position: relative;
+    left: 10%;
+}
+
+.nav-list button:hover {
+    background-color: rgb(70, 96, 180);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-curtain {
+    width: 100%;
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.account {
+    padding: 3%;
+    width: 60%;
+    text-align: center;
+}
+
+.profile-description button:hover {
+    background: linear-gradient(to right, #3e4ca9 51%, #9ed9ef 100%);
+}
+
+.profile-description {
+    display: block;
+    border-radius: 30px;
+    background-image: url("img/texture.png");
+    box-shadow: 0 0 10px 5px rgb(182, 191, 210);
+    line-height: 2%;
+    word-wrap: break-word;
+}
+
+.profile-description button {
+    border: 0;
+    position: relative;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    height: 53px;
+    left: 25%;
+    width: 50%;
+    border-radius: 6px;
+    margin-bottom: 1%;
+    word-wrap: break-word;
+}
+
+.profile-description img {
+    width: 60%;
+}
+
+
+.history {
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px 5px rgb(182, 192, 210);
+}
+
+.history button {
+    height: 30px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.history hr {
+    position: relative;
+    top: -10px;
+    width: 70%;
+}
+
+.history button:hover {
+    background: linear-gradient(to right, #3e4ca9 51%, #9ed9ef 100%);
+}
+
+.info {
+    margin-left: 10%;
+    width: 50%;
+}
+
+.small {
+    font-size: 10px;
+    color: #a6a6a6;
+}
+
+.green {
+    color: #50b765;
+}
+
+table {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-collapse: collapse;
+}
+
+table p {
+    text-align: left;
+    line-height: 10px;
+}
+
+table tr {
+    border-bottom: 1px solid #dedede;
+}
+
+table img {
+    border-radius: 100px;
+}
+
+.card-list {
+    position: relative;
+    top: -15px;
+    width: 1000px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(80, 91, 126, 0.5);
+}
+
+.left {
+    position: relative;
+    left: 50%;
+}
+
+.deposits {
+    position: relative;
+    top: -10px;
+    width: 1000px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(80, 91, 126, 0.5);
+}
+
+input {
+    font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+input#first-name, input#last-name, input#patronimyc, input#date-born, input#number {
+    margin: 5px;
+    padding: 0 10px;
+    width: 200px;
+    height: 34px;
+    color: #919191;
+    background: white;
+    border: 1px solid #c4c4c4;
+}
+
+#submit_btn {
+    height: 45px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    margin-bottom: 1%;
+}
+
+.return {
+    height: 45px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    margin-bottom: 1%;
+}
+
+#submit_btn:hover {
+    background: linear-gradient(to right, #3e4ca9 51%, #9ed9ef 100%);
+}
+
+.history-web {
+    width: 900px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px 5px rgb(182, 192, 210);
+}
+
+.history-web table {
+    width: 98%;
+    margin-right: 15px;
+}
+
+.history-web table p {
+    text-align: left;
+    line-height: 20px;
+}
+
+.history-web table tr {
+    border-bottom: 1px solid #dedede;
+
+}
+
+.history button:hover {
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    left: 2%;
+    padding: 10px;
+}
+
+.card p {
+    position: relative;
+    top: 1px;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.card img {
+    height: 100px;
+}
+
+.parcel-text {
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+}
+
+.deposit {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.deposit p {
+    position: relative;
+    top: 5px;
+    margin-left: 15px;
+}
+
+.history-web button {
+    border: none;
+}
+
+.history-web button:hover {
+    background: linear-gradient(to right, #3e4ca9 51%, #9ed9ef 100%);
+}
+
+.btn-dep {
+    position: relative;
+    top: 15px;
+    left: 940px;
+}
+
+.btn-dep:hover {
+    cursor: pointer;
+}
+
+.plus-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.plus-btn:hover {
+    cursor: pointer;
+}
+
+.hr-description {
+    width: 50%;
+}
+
+#born-date {
+    border: 0;
+}
+
+#input {
+    height: 20px;
+    position: relative;
+    left: 300px;
+    top: 25px;
+}
+
+.deposit-money {
+    position: relative;
+    top: 20px;
+    left: 650px;
+}
+
+.deposit-money input {
+    border: 1px solid #d2d2d2;
+    width: 90px;
+    font-size: 20px;
+}
+
+.change:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #3e4ca9 51%, #9ed9ef 100%);
+}
+
+.change {
+    height: 45px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    margin-bottom: 1%;
+}
+#profile{
+    display: none;
+}
+#changeBtn{
+    height: 45px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(44, 44, 122);
+    margin-bottom: 1%;
+    position: relative;
+    left: -5px;
+}
+#ready{
+    line-height: 10px;
+}
