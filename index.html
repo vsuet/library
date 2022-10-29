@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <h1>Банк "AOOAAO"</h1>
+    </div>
+
+    <hr>
+
+    <nav class="main-navigation">
+        <ul class="ul-nav">
+            <li class="nav-button" id="nav-open-deposit-btn">Открыть депозит</li>
+        </ul>
+    </nav>
+
+</header>
+
+<hr>
+
+<main>
+    <section class="user-area user-area-unauthorized" id="section-user">
+
+        <div class="user-info-block-hidden" id="user-info-block">
+            <img src="images/user.png" id="user-icon">
+
+            <div class="user-info-text">
+                <p id="user-surname"></p>
+                <p id="user-name"></p>
+                <p id="user-birth-date"></p>
+            </div>
+
+            <button type="button" class="button log-out-btn-visible" id="log-out-btn">
+                Выйти
+            </button>
+        </div>
+
+        <div class="log-in-account-block-visible" id="log-in-account-block">
+            <h2>Войти в акккаунт</h2>
+
+            <form class="form-log-in-account" action="">
+                <div class="input-block surname">
+                    <label for="surname-input">Фамилия</label>
+                    <input type="text" id="surname-input">
+                </div>
+
+                <div class="input-block name">
+                    <label for="name-input">Имя</label>
+                    <input type="text" id="name-input">
+                </div>
+
+                <div class="input-block patronymic">
+                    <label for="patronymic-input">Отчество</label>
+                    <input type="text" id="patronymic-input">
+                </div>
+
+                <div class="input-block date-of-birth">
+                    <label for="date-of-birth-input">Дата рождения</label>
+                    <input type="text" id="date-of-birth-input">
+                </div>
+
+                <button type="button" class="button log-in-btn-visible" id="log-in-btn">
+                    Войти в аккаунт
+                </button>
+            </form>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section class="section-deposits section-deposits-hidden" id="section-deposits">
+
+        <div class="list-deposits-block-hidden" id="list-deposits-block">
+
+            <h2>Список депозитов</h2>
+
+            <table class="table-list-deposits" id="table-list-deposits">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Сумма, $</th>
+                    <td></td>
+                </tr>
+                </thead>
+
+                <tbody id="tbody-list-deposits"></tbody>
+            </table>
+        </div>
+
+        <div class="edit-deposit-block-hidden" id="edit-deposit-block">
+            <h2>Редактировать депозит</h2>
+
+            <form action="" class="form-edit-deposit">
+                <p id="hidden-id-deposit"></p>
+                <p class="deposit-name-P" id="deposit-name-label"></p>
+                <p class="deposit-summa-P" id="deposit-summa-label"></p>
+                <div id="dollar-symbol">$</div>
+
+                <img src="images/close.png" class="close-button" id="close-btn-edit-deposit-block">
+
+                <div class="input-block new-name-deposit">
+                    <label for="edit-deposit-name">Название депозита</label>
+                    <input type="text" id="edit-deposit-name">
+                </div>
+
+                <div class="input-block insert-money">
+                    <label for="insert-money">Внести сумму, $</label>
+                    <input type="text" id="insert-money">
+                </div>
+
+                <div class="input-block takeOff-money">
+                    <label for="takeOff-money">Снять сумму, $</label>
+                    <input type="text" id="takeOff-money">
+                </div>
+
+                <button type="button" class="button rename-btn btns-edit-form" id="rename-btn">Переименовать</button>
+                <button type="button" class="button insert-money-btn btns-edit-form" id="insert-money-btn">Внести сумму</button>
+                <button type="button" class="button takeOff-money-btn btns-edit-form" id="takeOff-money-btn">Снять сумму</button>
+                <button type="button" class="button close-deposit-btn btns-edit-form" id="close-deposit-btn">Закрыть (удалить) депозит</button>
+            </form>
+        </div>
+
+        <div class="open-deposit-block-visible" id="open-deposit-block">
+            <h2>Открыть депозит</h2>
+
+            <form action="" class="form-open-deposit">
+                <div class="input-block name-deposit">
+                    <label for="deposit-name">Название депозита</label>
+                    <input type="text" id="deposit-name">
+                </div>
+
+                <img src="images/close.png" class="close-button" id="close-btn-open-deposit-block">
+
+                <div class="input-block deposit-summa">
+                    <label for="deposit-summa">Сумма, $</label>
+                    <input type="text" id="deposit-summa">
+                </div>
+
+                <button type="button" class="button open-deposit-btn" id="open-deposit-btn">Открыть депозит</button>
+            </form>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
