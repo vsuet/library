@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банк</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header-grid">
+        <img src="img/1.png" class="logo">
+
+        <div class="nav">
+            <h3 class="selected-nav-item">Главная</h3>
+            <h3>Подбор кредита</h3>
+            <h3>Вклады</h3>
+            <h3>Займы</h3>
+            <h3>Инвестиции</h3>
+            <h3>Депозиты</h3>
+        </div>
+
+    </header>
+    <hr>
+
+    <main>
+        <h1 class="slogan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, dolor.</h1>
+
+        <div class="grid">
+            <h3 class="u-data">Ваши данные</h3>
+            <h3 class="u-depo">Ваши депозиты</h3>
+            <h3 class="autorization-title">Авторизация</h3>
+
+
+            <div class="u-data-info">
+                <h3 class="name">Имя:</h3>
+                <div id="output-name" class="output-name"></div>
+                <h3 class="last-name">Фамилия:</h3>
+                <div id="output-last-name" class="output-last-name"></div>
+                <h3 class="patronymic">Отчество:</h3>
+                <div id="output-patronymic" class="output-patronymic"></div>
+            </div>
+
+            <div class="u-open-depo">
+                <h3>Открытые депозиты:</h3>
+                <section class="depo">
+                    <div id="depo"></div>
+                </section>
+
+            </div>
+
+            <section class="autorization-block">
+                <form class="input-autorization" id="form-autorization">
+                    <h3 class="autorization-input-name">Имя</h3>
+                    <input type="text" class="input-pole" id="input-name">
+                    <h3 class="autorization-input-name">Фамилия</h3>
+                    <input type="text" class="input-pole" id="input-last-name">
+                    <h3 class="autorization-input-name">Отчество</h3>
+                    <input type="text" class="input-pole" id="input-patronymic">
+
+                    <button type="submit" class="but" id="submit">Авторизоваться</button>
+
+
+
+                </form>
+
+            </section>
+
+            <section class="open-depo">
+                <form id="form-depo">
+                    <h3>Открыть депозит</h3>
+                    <h3>Сумма (в рублях)</h3>
+                    <input type="range" min="10000" max="100000" step="10000" value="10000" class="range"
+                        id="input-sum">
+                    <h3 id="sum">10000</h3>
+
+                    <h3>Срок (в годах)</h3>
+                    <input type="range" min="1" max="10" step="1" value="1" class="range" id="input-date">
+                    <h3 id="date">1</h3>
+                    <button type="submit" class="but-1" id="submit-1">Открыть депозит</button>
+                </form>
+
+            </section>
+
+
+
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

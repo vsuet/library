@@ -1,0 +1,225 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    grid-template-rows: 70px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    text-align: center;
+    margin: 20px;
+}
+
+.selected-nav-item {
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    border-radius: 20px;
+    color: white;
+    margin-top: 0px;
+    padding: 20px;
+
+}
+
+
+
+.slogan {
+    margin-left: 60px;
+    grid-area: a;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 28% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a b f"
+    "c d g"
+    "e d g";
+    gap: 20px;
+}
+
+.u-data {
+    grid-area: a;
+    text-align: center;
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+.u-data-info {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 191px 444px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a d"
+    "b e"
+    "c f";
+    padding-left: 60px;
+    border: 2px solid darkslateblue;
+    border-style: dotted;
+}
+
+.name{
+    grid-area: a;
+}
+
+.last-name{
+    grid-area: b;
+}
+
+.patronymic{
+    grid-area: c;
+}
+
+.output-name{
+    grid-area: d;
+}
+
+.output-last-name{
+    grid-area: e;
+}
+
+.output-patronymic{
+    grid-area: f;
+}
+
+.open-depo {
+    grid-area: e;
+    padding-left: 60px;
+    border: 2px solid darkslateblue;
+    border-style: dotted;
+}
+
+.u-depo {
+    grid-area: b;
+    text-align: center;
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+.u-open-depo {
+    text-align: center;
+    grid-area: d;
+    border: 2px solid darkslateblue;
+    border-style: dotted;
+}
+
+.depo{
+    margin-top: 30px;
+}
+
+
+.range {
+    width: 80%;
+    cursor: pointer;
+}
+
+
+.autorization-block{
+    grid-area: g;
+    border: 2px solid darkslateblue;
+    border-style: dotted;
+}
+
+.input-autorization{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-template-rows: repeat(auto, 30px);
+    grid-template-areas: 
+    "a b"
+    "c d"
+    "e f"
+    "g g";
+    gap: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.autorization-title{
+    grid-area: f;
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+
+}
+
+.autorization-input-name{
+    margin-top: 0px;
+}
+
+.input-pole{
+    font-size: 24px;
+}
+
+.but{
+    grid-area: g;
+    font-size: 24px;
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 50px;
+    cursor: pointer;
+    width: 70%;
+    margin-left: 30px;
+}
+
+.but-1{
+    grid-area: g;
+    font-size: 24px;
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    left: 45%;
+    transform: translate(-50%, 0);
+    margin-bottom: 50px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.depo-info{
+    margin-top: 10px;
+}
+
+.but-2{
+    background: linear-gradient(45deg, darkslateblue, rgb(93, 146, 214));
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.new-depo{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-template-rows: auto;
+    padding-left: 40px;
+}
