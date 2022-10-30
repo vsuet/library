@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<h1>Личный кабинет</h1>
+<p>Добро пожаловать</p><br>
+<div class="account">
+  <div class="operations">
+    <p class="history">История операций</p>
+    <table class="tab">
+      <tr>
+        <td><img class="img" src="assets/images/pyatorka.png" alt=""></td>
+        <td>Пятёрочка</td>
+        <td>-753,99 руб.</td>
+      </tr>
+
+      <tr>
+        <td><img class="img" src="assets/images/bk.png" alt=""></td>
+        <td>Burger King</td>
+        <td>-376,25 руб.</td>
+      </tr>
+
+      <tr>
+        <td><img class="img" src="assets/images/apteka.png" alt=""></td>
+        <td>Аптека</td>
+        <td>-107,49 руб.</td>
+      </tr>
+    </table>
+  </div>
+  <div class="money">
+    <p class="casheinf">Счёт пользователя</p>
+    <table>
+      <td>На счёте, руб:</td>
+      <td><p id="cashe">0</p></td>
+    </table>
+    <div>
+      <label for="input">Положить или снять деньги со счёта</label><br><input id="input">
+      <button onclick="add()">Положить</button>
+      <button onclick="remove()">Снять</button>
+    </div>
+  </div>
+</div>
+<div id="userdata"></div>
+<script src="assets/js/index.js"></script>
+</body>
+</html>
