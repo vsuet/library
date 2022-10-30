@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BebraBank</title>
+</head>
+<body>
+<div class="bank-name">
+  <h1>Вход в банковский аккаунт</h1>
+  <form>
+    <label for="fio">Введите ФИО: </label>
+    <input type="text" id="fio">
+    <label for="date">Выберите дату рождения: </label>
+    <input type="date" id="date">
+    <div class="button">
+      <button><a href="index2.html">Подтвердить</a></button>
+    </div>
+  </form>
+
+  <main class="inner-main">
+    <p id="out">Значение ФИО</p><div id="txt"></div>
+    <button onclick="out()">Показать</button>
+  </main>
+  <main class="inner-main">
+    <p id="out-2">Значение даты рождения</p><br>
+    <button onclick="btn()">Показать</button><div id="txt2"></div>
+  </main>
+  <div id="userdata"></div>
+  <script src="assets/js/index.js"></script>
+</div>
+</body>
+</html>

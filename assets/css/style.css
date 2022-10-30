@@ -1,0 +1,28 @@
+* {
+    text-align: center;
+}
+
+.history {
+    text-align: left;
+    margin-left: 35px;
+    font-size: 20pt;
+}
+
+
+.img {
+    width: 116px;
+    height: 80px;
+    background-color: white;
+}
+
+.account {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.casheinf {
+    font-size: 20pt;
+}
+
