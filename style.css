@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+h1 {
+    justify-content: center;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 18pt;
+}
+
+.main-navigation {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-areas:". ul .";
+    background-color: #000000;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 100%;
+    cursor: default;
+    background-color: #b1b6b5;
+}
+
+.nav-button:hover {
+    background-color: #b1b6b5;
+    color: white;
+}
+
+.nav-button:active {
+    background-color: #16a37e;
+    color: white;
+}
+
+.ul-nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    list-style: none;
+    font-size: 16pt;
+    grid-area: ul;
+}
+
+.user-area {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 20px 1fr 20px;
+    height: max-content;
+    font-size: 14pt;
+    background-color: #628882;
+}
+
+.user-area-unauthorized {
+    grid-template-areas:". . . ."
+                        ". log-in-account-block . ."
+                        ". . . . ";
+    height: 835px;
+}
+
+.user-area-authorized {
+    grid-template-areas:". . . ."
+                        ". user-info-block . ."
+                        ". . . . ";
+    height: max-content;
+}
+
+#user-surname {
+    font-size: 50pt;
+}
+
+#user-icon {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: #c7eee4;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px gray;
+    justify-self: center;
+    grid-area: user-icon;
+}
+
+.user-info-block-hidden {
+    display: none;
+}
+
+.user-info-block-visible {
+    display: grid;
+    grid-template-columns: 260px 2fr;
+    grid-template-rows: auto 100px;
+    grid-template-areas:"user-icon user-info-text"
+                        "log-out-btn .";
+    grid-area: user-info-block;
+}
+
+#log-out-btn {
+    grid-area: log-out-btn;
+}
+
+.log-out-btn-visible {
+    width: 150px;
+    height: 40px;
+}
+
+.log-out-btn-hidden {
+    display: none;
+}
+
+.user-info-text {
+    grid-area: user-info-text;
+}
+
+.log-in-account-block-visible {
+    width: 30%;
+    justify-self: center;
+    grid-area: log-in-account-block;
+    background-color: #628882;
+}
+
+.log-in-account-block-hidden {
+    display: none;
+}
+
+.form-log-in-account {
+    background-color: #c9d3d0;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px -2px gray;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 10px auto 30px;
+    grid-template-rows: repeat(4, 1fr) 100px 30px;
+    grid-template-areas:". surname ."
+                        ". name ."
+                        ". patronymic ."
+                        ". date-of-birth ."
+                        ". log-inout-btn .";
+}
+
+.form-log-in-account > .input-block > label {
+    align-self: start;
+    width: max-content;
+    padding: 5px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    background-color: #c9d3d0;
+    font-size: 12pt;
+}
+
+.form-log-in-account > .input-block > input {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    font-size: 14pt;
+}
+
+.log-in-btn-visible {
+    width: 250px;
+    height: 70px;
+}
+
+.log-in-btn-hidden {
+    display: none;
+}
+
+.surname {
+    grid-area: surname;
+}
+
+.name {
+    grid-area: name;
+}
+
+.patronymic {
+    grid-area: patronymic;
+}
+
+.date-of-birth {
+    grid-area: date-of-birth;
+}
+
+.log-in-btn-visible {
+    grid-area: log-in-btn;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px gray;
+    font-size: 16pt;
+    justify-self: center;
+    align-self: center;
+    grid-area: log-inout-btn;
+}
+
+.button:hover {
+    background-color: #1dc99c;
+    color: white;
+}
+
+.button:active {
+    background-color: #16a37e;
+    color: white;
+}
+
+.section-deposits {
+    display: grid;
+    grid-template-columns: 40px 45% auto 40px;
+    grid-auto-rows: max-content;
+    width: 100%;
+    min-height: 495px;
+    height: max-content;
+    background-color: #c5ebe1;
+    font-size: 14pt;
+}
+
+.section-deposits-hidden {
+    display: none;
+}
+
+.section-deposits-without-list-deposits {
+    grid-template-areas:". open-deposit-block open-deposit-block .";
+}
+
+.section-deposits-with-list-deposits {
+    grid-template-areas:". list-deposits-block . .";
+}
+
+.section-deposits-with-list-deposits-open-deposit-block {
+    grid-template-areas:". list-deposits-block open-deposit-block .";
+}
+
+.section-deposits-with-list-deposits-edit-deposit-block {
+    grid-template-areas:". list-deposits-block edit-deposit-block .";
+}
+
+.list-deposits-block-hidden {
+    display: none;
+}
+
+.list-deposits-block-visible {
+    grid-area: list-deposits-block;
+}
+
+.table-list-deposits {
+    width: 90%;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    border-collapse: collapse;
+    background-color: #97e7d2;
+    box-shadow: 4px 4px 10px -2px gray;
+}
+
+.table-list-deposits > tbody > tr > td {
+    height: 80px;
+    padding-left: 10px;
+}
+
+.table-list-deposits > thead > tr > th {
+    height: 70px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.table-list-deposits > tbody > tr:nth-child(odd) {
+    background-color: #afeae0;
+}
+
+.table-list-deposits > tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.table-list-deposits > tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.pen-img {
+    padding: 5px;
+}
+
+.edit-deposit-block-hidden {
+    display: none;
+}
+
+.edit-deposit-block-visible {
+    grid-area: edit-deposit-block;
+}
+
+.form-edit-deposit {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 10px 1fr 20px max-content 1fr 30px;
+    grid-template-rows: auto auto auto auto 72px auto;
+    grid-template-areas:". deposit-name .  deposit-summa dollar-symbol close-button"
+                        ". new-name-deposit . rename-btn rename-btn ."
+                        ". insert-money . insert-money-btn insert-money-btn ."
+                        ". takeOff-money . takeOff-money-btn takeOff-money-btn ."
+                        ". . . close-deposit-btn close-deposit-btn ."
+                        ". . . . . .";
+    margin-bottom: 30px;
+    background-color: #97e7d2;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px -2px gray;
+}
+
+.form-edit-deposit > .input-block > label {
+    width: max-content;
+    padding: 5px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    background-color: #97e7d2;
+    font-size: 12pt;
+    align-self: start;
+}
+
+.form-edit-deposit > .input-block > input {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    font-size: 14pt;
+}
+
+.btns-edit-form {
+    width: 330px;
+    height: 47px;
+    justify-self: start;
+    align-self: end;
+}
+
+.deposit-name-P {
+    font-size: 30pt;
+    align-self: center;
+    grid-area: deposit-name;
+}
+
+.deposit-summa-P {
+    font-size: 30pt;
+    align-self: center;
+    grid-area: deposit-summa;
+}
+
+.close-button {
+    padding-top: 10px;
+    grid-area: close-button;
+}
+
+.close-button:hover {
+    cursor: pointer;
+}
+
+.new-name-deposit {
+    grid-area: new-name-deposit;
+}
+
+.insert-money {
+    grid-area: insert-money;
+}
+
+.takeOff-money {
+    grid-area: takeOff-money;
+}
+
+.rename-btn {
+    grid-area: rename-btn;
+}
+
+.insert-money-btn {
+    grid-area: insert-money-btn;
+}
+
+.takeOff-money-btn {
+    grid-area: takeOff-money-btn;
+}
+
+.close-deposit-btn {
+    background-color: #91b4ae;
+    grid-area: close-deposit-btn;
+}
+
+#dollar-symbol {
+    align-self: center;
+    font-size: 30pt;
+    padding-left: 6px;
+    grid-area: dollar-symbol;
+}
+
+#hidden-id-deposit {
+    display: none;
+}
+
+.open-deposit-block-visible {
+    width: 450px;
+    justify-self: center;
+    grid-area: open-deposit-block;
+}
+
+.open-deposit-block-hidden {
+    display: none;
+}
+
+.form-open-deposit {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 10px 1fr 30px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:". name-deposit close-button"
+                        ". deposit-summa ."
+                        ". open-deposit-btn .";
+    height: 300px;
+    background-color: #97e7d2;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px -2px gray;
+}
+
+.form-open-deposit > .input-block > label {
+    width: max-content;
+    padding: 5px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    background-color: #97e7d2;
+    font-size: 12pt;
+    align-self: start;
+}
+
+.form-open-deposit > .input-block > input {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    font-size: 14pt;
+}
+
+.name-deposit {
+    grid-area: name-deposit;
+}
+
+.deposit-summa {
+    grid-area: deposit-summa;
+}
+
+.open-deposit-btn {
+    width: 230px;
+    grid-area: open-deposit-btn;
+}
