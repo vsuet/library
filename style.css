@@ -72,10 +72,6 @@ a {
     height: 25px;
 }
 
-.transactions {
-    
-}
-
 .button-log_out {
     color: var(--secondary);
     text-decoration: none;
@@ -166,4 +162,23 @@ input:invalid {
     25% { transform: translateX(4px)}
     50% { transform: translateX(-4px)}
     75% { transform: translateX(4px)}
+}
+
+.result {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 44px;
+}
+
+.overview {
+    background-color: white;
+    color: var(--secondary);
+    border: 5px solid #09AE07;
+    border-width: 0;
+    border-right-width: 3px ;  
+}
+
+.overview-img {
+    filter: invert();
 }
