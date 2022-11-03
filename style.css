@@ -1,3 +1,8 @@
+:root {
+    --primary: #2366B5;
+    --secondary: #4A90E2;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +14,28 @@
     height: 100vh;
 }
 
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 42px;
+    padding-right: 161px;
+}
 header {
-    background-color: #2366B5;
+    background-color: var(--primary);
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 10%;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 50px;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
 
 .logo {
@@ -24,14 +43,9 @@ header {
     margin: 50px 0px;
 }
 
-header>div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 a {
     text-decoration: none;
+    width: 100%;
 }
 
 .menu-item {
@@ -44,8 +58,9 @@ a {
     font-weight: 800;
     font-size: 18px;
     line-height: 25px;
-    width: 200px;
+    width: 100%;
     text-align: left;
+    align-self: center;
 }
 
 .svg {
@@ -57,9 +72,12 @@ a {
     height: 25px;
 }
 
+.transactions {
+    
+}
 
 .button-log_out {
-    color: #4A90E2;
+    color: var(--secondary);
     text-decoration: none;
     border-radius: 15px;
     background-color: white;
@@ -90,7 +108,7 @@ a {
 
 .menu-item:hover {
     background-color: white;
-    color: #4A90E2;
+    color: var(--secondary);
     border: 5px solid #09AE07;
     border-width: 0;
     border-right-width: 3px ;  
@@ -98,4 +116,54 @@ a {
 
 .menu-item:hover>img {
     filter: invert();
+}
+
+.content {
+    width: 90%;
+    align-items: center;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    margin: 15% 40%;
+    padding: 50px;
+    gap: 30px;
+    border: 5px #C4C4C4 solid;
+    border-radius: 10%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary);
+}
+
+.sign-in>p {
+    margin-bottom: 100px;
+}
+
+input {
+    height: 40px;
+}
+
+button {
+    align-self: center;
+    background-color: var(--secondary);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10%;
+    color: white;
+}
+
+input:invalid {
+    animation: shake .3s;
+}
+
+@keyframes shake {
+    25% { transform: translateX(4px)}
+    50% { transform: translateX(-4px)}
+    75% { transform: translateX(4px)}
 }
