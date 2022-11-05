@@ -1,0 +1,134 @@
+*{
+    display: grid;
+}
+.container{
+    background-color: rgb(227, 242, 245);
+
+}
+
+.header{
+text-align: center;
+font-size: 23px;
+background-color: cadetblue;
+}
+
+.user{
+    text-align: center;
+    padding-bottom:  5px;
+    background: rgba(224, 221, 221, 0.945);
+    margin: 10px auto;
+    padding: 20px 0px 0px;
+    text-align: center;
+    height: 130px;
+    width: 300px;
+    border: 2px solid rgb(117, 117, 117);
+}
+.form{
+    justify-self: center;
+}
+
+.form_content{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(224, 221, 221, 0.945);
+    box-shadow: rgba(211, 211, 211, 0.719);
+    text-align: center;
+    height: 570px;
+    position: relative;
+    margin: 60px;
+    padding: 5px;
+}
+
+.checkbox{
+    font-size: 12px;
+}
+
+.news {
+  
+    grid-template-columns: repeat();
+    font-size: 25px;
+    text-align: center;
+    background-color:cadetblue;
+
+}
+
+.content{
+justify-self: center;
+    padding: 7px;
+    width: 500px;
+
+}
+
+.footer{
+    background-color: cadetblue;
+    text-align: center;
+}
+
+h1{
+    background-color:cadetblue;
+    text-align: center;
+}
+
+.operations{
+    text-align: center;
+    margin-left: 200px;
+    padding-bottom: 25px;
+   background-color:  rgba(224, 221, 221, 0.945);
+   width: 550px;
+   height: 610px;
+   position: relative;
+   justify-self: center;
+
+}
+.userfoto{
+    width: 120px;
+    position: static;
+    left:20px;
+  text-align: left;
+}
+
+.user1{
+    text-align: center;
+    margin-left: 100px;
+    padding-bottom: 50px;
+    justify-self: center;
+}
+.card1{
+    width: 80px;
+    position: static;
+    left:20px;
+  
+    padding-top: 10px;
+
+}
+
+.card2{
+    width: 75px;
+    position: static;
+    left:20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.user1{
+    text-align: center;
+    width: 500px;
+}
+.backbutt{
+    height: 40px;
+    margin-top: 30px;
+    background-color: cadetblue;
+    justify-self: center;
+    width: 300px;
+}
+
+button{
+    margin-top: 7px;
+}
+
+.class-2{
+    text-align: center;
+    margin-top: none;
+}
+footer{
+    background-color: cadetblue;
+}

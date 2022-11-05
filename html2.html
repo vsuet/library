@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js_code.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1> Личный кабинет </h1>
+        <div class="user1">
+            <table>
+                <tr>
+                    <h2>Пользователь</h2>
+                    <td><img class="userfoto" src="user.jpg"></td>
+                    <td> <input type="text" placeholder="Фамилия"></td>
+
+                    <td><input type="text" placeholder="Имя"></td>
+                    <td><input type="text" placeholder="Отчетсво"></td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="operations">
+            <h2>Счет пользователя</h2>
+
+            <div>
+                <img class="card1" src="card1.png">
+                <div class="class-2"> 
+                            <p id="bill">0</p>
+                </div>
+                <div><img class="card1" src="">
+                    <p>Счет №4071768597665685</p><input id="inputoperations" />
+
+                    <button onclick="add()">Внести</button>
+                    <button onclick="takeoff()">Снять</button><br>
+                </div>
+
+                <hr>
+
+                <img class="card2" src="card2.jpg">
+                <div class="class-2">
+                            <p id="bill1">0</p>
+                </div>
+            </div>
+
+
+            <div><img class="card2" src="">
+                <p>Счет №4071760007665685</p><input id="inputoperations1" />
+
+                <button onclick="add1()">Внести</button>
+                <button onclick="takeoff1()">Снять</button>
+            </div>
+        </div>
+        <footer>
+           <div class="backbutt">
+            <button><a href="contr3.html">Вернуться на главную</a> </button>
+        </div>  
+        </footer>
+
+    </div>
+    </div>
+</body>
+
+</html>
