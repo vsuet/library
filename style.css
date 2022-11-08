@@ -1,0 +1,369 @@
+:root {
+    --primary: #2366B5;
+    --secondary: #4A90E2;
+    --border: #C4C4C4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 120px;
+    height: 90%;
+}
+header {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.logo {
+    align-self: center;
+    margin: 50px 0px;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    width: 100%;
+    text-align: left;
+    align-self: center;
+}
+
+.svg {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.doc {
+    height: 25px;
+}
+
+.button-log_out {
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: white;
+    width: 60%;
+    padding: 5px 10px;
+    align-self: center;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    display: flex;
+}
+
+.button-log_out>img {
+    margin-right: 5px;
+}
+
+.button-log_out:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.button-log_out:hover>img {
+    filter: brightness(10);
+}
+
+.menu-item:hover {
+    background-color: white;
+    color: var(--secondary);
+    border: 5px solid #09AE07;
+    border-width: 0;
+    border-right-width: 3px ;  
+}
+
+.menu-item:hover>img {
+    filter: invert();
+}
+
+.content {
+    width: 90%;
+    align-items: center;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    margin: 15% auto;
+    width: 500px;
+    padding: 30px 100px;
+    gap: 30px;
+    border: 5px var(--border) solid;
+    border-radius: 10%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary);
+    height: 500px;
+}
+
+.sign-in>p {
+    line-height: 100px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.sign-in>input {
+    height: 40px;
+    border: 2px var(--border) solid;
+    border-radius: 100px;
+}
+
+button {
+    align-self: center;
+    background-color: var(--secondary);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10%;
+    color: white;
+}
+
+input:invalid {
+    animation: shake .3s;
+}
+
+@keyframes shake {
+    25% { transform: translateX(4px)}
+    50% { transform: translateX(-4px)}
+    75% { transform: translateX(4px)}
+}
+
+.result {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    width: 100%;
+    margin-top: 90px ;
+}
+
+.overview {
+    background-color: white;
+    color: var(--secondary);
+    border: 5px solid #09AE07;
+    border-width: 0;
+    border-right-width: 3px ;  
+}
+
+.overview-img {
+    filter: invert();
+}
+
+.error {
+    color: red;
+}
+
+.add-account {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 300px;
+    border: var(--border) 2px solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    color: #535353;
+    padding: 50px 0px;
+}
+
+.add-account>p {
+    margin-bottom: 33px;
+}
+
+.add-account>img {
+    margin-top: 34px;
+    cursor: pointer;;
+}
+
+.container>p {
+    margin-top: 46px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.account-card {
+    width: 340px;
+    height: 300px;
+    border: var(--border) 2px solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+}
+
+.accounts {
+    display: flex;
+    gap: 40px;
+}
+
+.accounts input {
+    height: 40px;
+    border: 2px var(--border) solid;
+    border-radius: 100px;
+}
+
+.money-count {
+    display: flex;
+    justify-content: center;
+}
+
+.operations>button {
+    margin:10px 20px;
+}
+
+.plus1,.plus2,.plus3,.minus1,.minus2,.minus3{
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
+.delete1,.delete2,.delete3 {
+    background-color: red;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+#money1,#money2,#money3 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--primary);
+}
+
+.money-count {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--secondary);
+}
+
+hr {
+    margin: 50px 0;
+    height: 2px;
+    background-color: var(--border);
+    border: none;
+}
+
+.history {
+    width: 100%;
+    height: 300px;
+    box-shadow: 2px 2px 2px;
+    border: 2px var(--border) solid;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary);
+}
+
+.history-header>div {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    margin: 14px 0;
+}
+
+.history-element {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    width: 100%;
+}
+
+.btns-pages {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .btns-pages > * {
+    cursor: pointer;
+    color: white;
+    width: 30px;
+  }
+  
+  .num-page {
+    padding: 10px;
+    display: none;
+  }
+  
+  .num-page.num-active {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+.history-content > div {
+    display: none;
+}
