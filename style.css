@@ -15,11 +15,8 @@
 }
 
 .container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 42px;
-    padding-right: 161px;
+    margin: 0 120px;
+    height: 1000px;
 }
 header {
     background-color: var(--primary);
@@ -134,6 +131,7 @@ a {
     font-size: 18px;
     line-height: 25px;
     color: var(--primary);
+    height: 550px;
 }
 
 .sign-in>p {
@@ -142,6 +140,8 @@ a {
 
 input {
     height: 40px;
+    border: 2px #C4C4C4 solid;
+    border-radius: 100px;
 }
 
 button {
@@ -168,7 +168,9 @@ input:invalid {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 44px;
+    font-size: 32px;
+    width: 100%;
+    margin-top: 90px ;
 }
 
 .overview {
@@ -182,3 +184,57 @@ input:invalid {
 .overview-img {
     filter: invert();
 }
+
+.error {
+    color: red;
+}
+
+.add-account {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 250px;
+    border: #C4C4C4 2px solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    color: #535353;
+    padding: 25px 0px;
+}
+
+.add-account>p {
+    margin-bottom: 28px;
+}
+
+.add-account>img {
+    margin-top: 30px;
+    cursor: pointer;;
+}
+
+.container>p {
+    margin-top: 46px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.account-card {
+    width: 340px;
+    height: 250px;
+    border: #C4C4C4 2px solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.accounts {
+    display: flex;
+    gap: 25px;
+}
+
