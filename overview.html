@@ -36,12 +36,34 @@
                 <p>Account Balance</p> 
                 <div class="accounts">
                     <div class="add-account">
-                        <p>How much money you need?</p>
+                        <p>How much money do you need?</p>
                         <input id="money-count" type='number' pattern="[0-9]*" required>
                         <img id="button-add" src="img/add-btn.png">
                     </div>
-                    <div class="account"></div>
-                </div>  
+                </div>
+                <hr>
+                <p>Transactions</p> 
+                <div class="history">
+                    <div class="history-header">
+                        <div>Type</div>
+                        <div>Date</div>
+                        <div>Details</div>
+                        <div>Amount</div>
+                        <div>Balance</div>
+                    </div>
+                    <div class="history-content">
+                        <div id="1" class="num-page num-active"></div>
+                        <div id="2" class="num-page"></div>
+                        <div id="3" class="num-page"></div>
+                        <div id="4" class="num-page"></div>
+                        <div id="5" class="num-page"></div>
+                    </div>
+                    
+                </div>
+                <div class="btns-pages">
+                    <button  class="btn-left" type="submit"><</button>
+                    <button  class="btn-right" type="submit">></button>
+                </div> 
             </div>
         </main>
     </div>

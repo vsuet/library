@@ -58,51 +58,174 @@ buttonAdd.addEventListener('click', function(e){
     var btnDelete1 = document.querySelector('.delete1')
     var btnDelete2 = document.querySelector('.delete2')
     var btnDelete3 = document.querySelector('.delete3')
-    
+    let i = 0
 
+    
     if (money.value != "" && !btnDelete1){
         account.appendChild(newDiv1)
 
         document.querySelector('.plus1').addEventListener('click', function(e){
             if (document.getElementById('vnesti1').value != ""){
-                
+                if (i<5){
                 let data = parseInt(document.getElementById('vnesti1').value) + parseInt(document.getElementById('money1').getInnerHTML())
                 document.getElementById('money1').innerHTML= data;
 
                 let historyDiv = document.createElement('div')
                 historyDiv.className = 'history-element'
 
+                i=i+1
+
                 var today = new Date();
                 var now = today.toLocaleString();
 
                 
                 firstPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+                else if(i<10) {
+                let data = parseInt(document.getElementById('vnesti1').value) + parseInt(document.getElementById('money1').getInnerHTML())
+                document.getElementById('money1').innerHTML= data;
+
                 
+
+                i=i+1
+
+                var today = new Date();
+                var now = today.toLocaleString();
+
                 
-                
+                secondPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti1').value}</div> <div>${data}</div>`
+                }
+                else if(i<15) {
+                    let data = parseInt(document.getElementById('vnesti1').value) + parseInt(document.getElementById('money1').getInnerHTML())
+                    document.getElementById('money1').innerHTML= data;
+    
+                    let historyDiv = document.createElement('div')
+                    historyDiv.className = 'history-element'
+    
+                    i=i+1
+    
+                    var today = new Date();
+                    var now = today.toLocaleString();
+    
+                    
+                    thirdPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+                else if(i<20) {
+                    let data = parseInt(document.getElementById('vnesti1').value) + parseInt(document.getElementById('money1').getInnerHTML())
+                    document.getElementById('money1').innerHTML= data;
+    
+                    let historyDiv = document.createElement('div')
+                    historyDiv.className = 'history-element'
+    
+                    i=i+1
+    
+                    var today = new Date();
+                    var now = today.toLocaleString();
+    
+                    
+                    fourthPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+                else if(i<25) {
+                    let data = parseInt(document.getElementById('vnesti1').value) + parseInt(document.getElementById('money1').getInnerHTML())
+                    document.getElementById('money1').innerHTML= data;
+    
+                    let historyDiv = document.createElement('div')
+                    historyDiv.className = 'history-element'
+    
+                    i=i+1
+    
+                    var today = new Date();
+                    var now = today.toLocaleString();
+    
+                    
+                    fifthPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
             }
 
         })
 
         document.querySelector('.minus1').addEventListener('click', function(e){
-            if (document.getElementById('vnesti1').value != ""){
+                if (i<5){
                 let data = parseInt(document.getElementById('money1').getInnerHTML()) - parseInt(document.getElementById('vnesti1').value)
                 document.getElementById('money1').innerHTML= data;
 
                 let historyDiv = document.createElement('div')
                 historyDiv.className = 'history-element'
 
+                i=i+1
+
+                var today = new Date();
+                var now = today.toLocaleString();
+                
+                
+                firstPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+                else if(i<10) {
+                let data = parseInt(document.getElementById('money1').getInnerHTML()) - parseInt(document.getElementById('vnesti1').value)
+                document.getElementById('money1').innerHTML= data;
+
+                let historyDiv = document.createElement('div')
+                historyDiv.className = 'history-element'
+
+                i=i+1
+
                 var today = new Date();
                 var now = today.toLocaleString();
 
                 
-                firstPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
-            }
+                secondPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti1').value}</div> <div>${data}</div>`
+                }
+                else if(i<15) {
+                    let data = parseInt(document.getElementById('money1').getInnerHTML()) - parseInt(document.getElementById('vnesti1').value)
+                    document.getElementById('money1').innerHTML= data;
+    
+                    let historyDiv = document.createElement('div')
+                    historyDiv.className = 'history-element'
+    
+                    i=i+1
+    
+                    var today = new Date();
+                    var now = today.toLocaleString();
+    
+                    
+                    thirdPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+                else if(i<20) {
+                    let data = parseInt(document.getElementById('money1').getInnerHTML()) - parseInt(document.getElementById('vnesti1').value)
+                    document.getElementById('money1').innerHTML= data;
+    
+                    let historyDiv = document.createElement('div')
+                    historyDiv.className = 'history-element'
+    
+                    i=i+1
+    
+                    var today = new Date();
+                    var now = today.toLocaleString();
+    
+                    
+                    fourthPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+                else if(i<25) {
+                    let data = parseInt(document.getElementById('money1').getInnerHTML()) - parseInt(document.getElementById('vnesti1').value)
+                    document.getElementById('money1').innerHTML= data;
+    
+                    let historyDiv = document.createElement('div')
+                    historyDiv.className = 'history-element'
+    
+                    i=i+1
+    
+                    var today = new Date();
+                    var now = today.toLocaleString();
+    
+                    
+                    fifthPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti1').value}</div>  <div>${data}</div>`
+                }
+            
         })
         
         document.querySelector('.delete1').addEventListener('click', function(e){
             account.removeChild(newDiv1)
-            historyContent.remove(historyDiv)
+            document.querySelector('.num-page').removeChild(historyDiv)
         })
     }
     else if (money.value != "" && !btnDelete2){
@@ -112,16 +235,6 @@ buttonAdd.addEventListener('click', function(e){
             if(document.getElementById('vnesti2').value != ""){
                 let data = parseInt(document.getElementById('vnesti2').value) + parseInt(document.getElementById('money2').getInnerHTML())
                 document.getElementById('money2').innerHTML= data;
-
-                let historyDiv = document.createElement('div')
-                historyDiv.className = 'history-element'
-
-                var today = new Date();
-                var now = today.toLocaleString();
-
-                
-                firstPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti2').value}</div>  <div>${data}</div>`
-
             }
         } )
 
@@ -129,16 +242,6 @@ buttonAdd.addEventListener('click', function(e){
             if (document.getElementById('vnesti2').value != ""){
                 let data = parseInt(document.getElementById('money2').getInnerHTML()) - parseInt(document.getElementById('vnesti2').value)
                 document.getElementById('money2').innerHTML= data;
-
-                let historyDiv = document.createElement('div')
-                historyDiv.className = 'history-element'
-
-                var today = new Date();
-                var now = today.toLocaleString();
-
-                
-                firstPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti2').value}</div>  <div>${data}</div>`
-
             }
         })
 
@@ -153,16 +256,6 @@ buttonAdd.addEventListener('click', function(e){
             if(document.getElementById('vnesti3').value != ""){
                 let data = parseInt(document.getElementById('vnesti3').value) + parseInt(document.getElementById('money3').getInnerHTML())
                 document.getElementById('money3').innerHTML= data;
-
-                let historyDiv = document.createElement('div')
-                historyDiv.className = 'history-element'
-
-                var today = new Date();
-                var now = today.toLocaleString();
-
-                
-                firstPage.appendChild(historyDiv).innerHTML = `<div>Deposit</div><div>${now}</div><div>Deposit</div><div>${document.getElementById('vnesti3').value}</div>  <div>${data}</div>`
-
             }
         })
 
@@ -170,16 +263,6 @@ buttonAdd.addEventListener('click', function(e){
             if (document.getElementById('vnesti3').value != ""){
                 let data = parseInt(document.getElementById('money3').getInnerHTML()) - parseInt(document.getElementById('vnesti3').value)
                 document.getElementById('money3').innerHTML= data;
-
-                let historyDiv = document.createElement('div')
-                historyDiv.className = 'history-element'
-
-                var today = new Date();
-                var now = today.toLocaleString();
-
-                
-                firstPage.appendChild(historyDiv).innerHTML = `<div>Withdraw</div><div>${now}</div><div>Withdraw</div><div>${document.getElementById('vnesti3').value}</div>  <div>${data}</div>`
-
             }
         })
         
