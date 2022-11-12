@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Банковский аккаунт</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <p> Rich Bank </p>
+</header>
+<main>
+    <section class="card-holder">
+        <div class="card">
+            <form id="form-open-wallet">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Открыть счет </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="text" id="name" placeholder="Введите имя" required>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="amount" placeholder="Введите сумму" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="create">Открыть</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card" id="user-data">
+
+
+            </div>
+    </section>
+    <section class="notification">
+        <h3>Уведомления</h3>
+        <button id="clear-notifications" type="button">Очистить</button>
+        <div id="notification-list"></div>
+    </section>
+
+    <section class="wallets">
+        <hr>
+        <h3>Ваши открытые счёты:</h3>
+        <section id="wallets-list"></section>
+    </section>
+
+<button id="get-wallets" type="button">Получить кошельки</button>
+</main>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
