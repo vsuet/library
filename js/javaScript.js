@@ -12,6 +12,8 @@ document.getElementById("take-off").addEventListener("click", () => {
   withdrawalSum(infoContribution,nameContribution.value,sumContribution.value);
 });
 const not = document.getElementById("not");
+document.getElementById('close-score').addEventListener('click',()=>{
+	deletContribution(infoContribution, nameContribution.value)})
 let infoContribution = [];
 
 function update(event) {
@@ -131,8 +133,7 @@ function withdrawalSum(array, room, balance) {
     } 
   }
 }
-document.getElementById('close-score').addEventListener('click',()=>{
-	deletContribution(infoContribution, nameContribution.value)})
+
 	
 function chekDelet(){
 	if (nameContribution.value === "" || parseInt(nameContribution.value) < 16) {
