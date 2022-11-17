@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>"Рога и копыта"</title>
+	<link rel="stylesheet" href="CSS/style-center.css">
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1>Рога и копыта инвест</h1>
+		</div>
+		<div>
+			<p>Личный кабинет</p>
+		</div>
+	</header>
+
+	<main class="grid-container">
+		<div class="person-container">
+			<section class="person-data">
+				<h3>Ваши персональные данные</h3>
+				<hr>
+				<div class="user-icon"><img src="img/user-icon.png"></div>
+				<div>
+					Имя:
+					<p id="user-name"></p>
+				</div>
+				<div>
+					Фамилия:
+					<p id="user-surname"></p>
+				</div>
+				<div>
+					Дата рождения:
+					<p id="user-birth"></p>
+				</div>
+				<button id="PersonDataButton" type="button">Запись данных</button>
+			</section>
+			<div id="form-show">
+				<form role="form" autocomplete="off" id="FormPersonData">
+					<label>Имя</label>
+					<input type="text" id="name" name="имя">
+					<label>Фамилия</label>
+					<input type="text" id="Surname">
+					<label>Дата рождения</label>
+					<input type="date" id="Year-of-birth">
+					<button id="insert">Записать</button>
+				</form>
+			</div>
+		</div>
+		<div class="form-contribution">
+			<form id="FormMoney" role="form">
+				<label>Номер счета</label>
+				<input type="text" id="name-contribution" class="indent-contribution" maxlength="16">
+				<label>Сумма</label>
+				<input type="text" id="sum-contribution" class="indent-contribution">
+				<button id="take-off" type="submit">Снять</button>
+				<button id="top-up" type="submit">Внести</button>
+				<label class="indent-contribution">Тип вклад</label>
+				<select id="type-contribution">
+					<option value="Сберегательный">Сберегательный вклад</option>
+					<option value="Накопительный">Накопительный вклад</option>
+					<option value="Расчетный">Расчетный вклад</option>
+				</select>
+				<div>
+					<button id="open-score" type="submit">Открыть вклад</button>
+					<button id="close-score" type="submit">Закрыть вклад</button>
+				</div>
+			</form>
+		</div>
+		<section class="notification">
+			<h3>Уведомления</h3>
+			<div id="not"></div>
+		</section>
+		<section class="deposits">
+			<hr>
+			<h3>Ваши вклады</h3>
+			<div class="new-contribution">
+			</div>
+		</section>
+	</main>
+	<script src="js/javaScript.js"></script>
+</body>
+
+</html>
