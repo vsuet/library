@@ -66,18 +66,20 @@ function Random(min, max) {
 
 function openDeposits(el) {
   let balance = 0;
-  let rnd = Random("1", "10000");
-  el.innerHTML += `<div><div>номер вклада:
+  let idSpan = Random("1", "10000");
+	let divContr=Random("1", "100000");
+  el.innerHTML += `<div id=${divContr}><div>номер вклада:
     ${nameContribution.value}</div class="contr"> <div>тип вклада:${typeContribution.value}</div>
-    <div>баланс:<span id="${rnd}">${balance}</span></div></div>`;
-  newObject(infoContribution, nameContribution.value, balance, rnd);
+    <div>баланс:<span id="${idSpan}">${balance}</span></div></div>`;
+  newObject(infoContribution, nameContribution.value, balance, idSpan,divContr);
 }
 
-function newObject(array, room, balance, rnd) {
+function newObject(array, room, balance, rndSpan,rndDiv) {
   let contribution = {
     idContribution: parseInt(room),
     sum: parseInt(balance),
-    idSpan: rnd,
+    idSpan: rndSpan,
+		idDiv:rndDiv,
   };
   array.push(contribution);
 }
@@ -128,4 +130,28 @@ function withdrawalSum(array, room, balance) {
       }
     } 
   }
+}
+document.getElementById('close-score').addEventListener('click',()=>{
+	deletContribution(infoContribution, nameContribution.value)})
+	
+function chekDelet(){
+	if (nameContribution.value === "" || parseInt(nameContribution.value) < 16) {
+		alert("Проверьте правильность написания счета!");
+	}
+	let message = prompt("Введите трехзначный код");
+	if (message.length === 3 && message === "123") {
+		return true;
+	}
+}
+
+function deletContribution(array, room){
+	for (const arr of array) {
+    if (arr.idContribution === parseInt(room)) {
+			if(chekDelet()){
+				let contrib=document.getElementById(arr.idDiv);
+				contrib.innerHTML='';
+				array=array.filter(value=>value.idContribution!==parseInt(room));
+			}
+	}
+}
 }
