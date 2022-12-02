@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Банковский аккаунт</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <p> Rich Bank </p>
+</header>
+<main>
+    <section class="card-holder">
+        <div class="card">
+            <form id="form-open-wallet">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Открыть счет </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="text" id="name" placeholder="Введите имя" required>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="amount" placeholder="Введите сумму" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="create">Открыть</button>
+                    </div>
+                </div>
+            </form>
+            <form id="form-close-wallet">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Закрыть счет </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="id" placeholder="Введите номер счета" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="close">Закрыть</button>
+                    </div>
+                </div>
+            </form>
+            <p>При закрытии счета, сумма на счету будет списана в пользу банка</p>
+        </div>
+        <div class="card">
+            <form id="wallet-add-money">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Пополнить счет </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="idAdd" placeholder="Введите номер счета" required>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="moneyAdd" placeholder="Введите сумму" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="add">Пополнить</button>
+                    </div>
+                </div>
+            </form>
+            <form id="wallet-withdraw-money">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Снять со счета </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="idWithdraw" placeholder="Введите номер счета" required>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="moneyWithdraw" placeholder="Введите сумму" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="withdraw">Снять</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="card" id="user-data"></div>
+    </section>
+
+    <section class="wallets">
+        <hr>
+        <h3>Ваши открытые счёты:</h3>
+        <section id="wallets-list"></section>
+    </section>
+</main>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
