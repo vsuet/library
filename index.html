@@ -29,16 +29,57 @@
                     </div>
                 </div>
             </form>
+            <form id="form-close-wallet">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Закрыть счет </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="id" placeholder="Введите номер счета" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="close">Закрыть</button>
+                    </div>
+                </div>
+            </form>
+            <p>При закрытии счета, сумма на счету будет списана в пользу банка</p>
         </div>
-        <div class="card" id="user-data">
+        <div class="card">
+            <form id="wallet-add-money">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Пополнить счет </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="idAdd" placeholder="Введите номер счета" required>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="moneyAdd" placeholder="Введите сумму" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="add">Пополнить</button>
+                    </div>
+                </div>
+            </form>
+            <form id="wallet-withdraw-money">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        <h1> Снять со счета </h1>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="idWithdraw" placeholder="Введите номер счета" required>
+                    </div>
+                    <div class="card-body-input">
+                        <input type="number" id="moneyWithdraw" placeholder="Введите сумму" required>
+                    </div>
+                    <div class="card-body-buttons">
+                        <button id="withdraw">Снять</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
-
-            </div>
-    </section>
-    <section class="notification">
-        <h3>Уведомления</h3>
-        <button id="clear-notifications" type="button">Очистить</button>
-        <div id="notification-list"></div>
+        <div class="card" id="user-data"></div>
     </section>
 
     <section class="wallets">
@@ -46,8 +87,6 @@
         <h3>Ваши открытые счёты:</h3>
         <section id="wallets-list"></section>
     </section>
-
-<button id="get-wallets" type="button">Получить кошельки</button>
 </main>
 <script src="js/script.js"></script>
 
